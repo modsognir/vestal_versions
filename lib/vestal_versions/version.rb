@@ -7,6 +7,8 @@ module VestalVersions
     include Comparable
     include ActiveSupport::Configurable
 
+    attr_accessible :modifications, :number, :user
+
     # Associate polymorphically with the parent record.
     belongs_to :versioned, :polymorphic => true
 
